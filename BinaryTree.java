@@ -90,7 +90,31 @@ public class BinaryTree<T extends Comparable> implements MyCollection<T> {
             addNode(root, node);
         }
         calculateBalance(root);
+        balance(root);
         Main.viewTree(this);
+    }
+
+    private void balance(Node<T> node){
+        //We need to balance this node
+        if(node.getBalanceFactor() > 1 || node.getBalanceFactor() < -1){
+            if(node.getBalanceFactor() < 0){
+                //We need to do a right rotation
+                //1. Get a new reference to the root
+                Node<T> tempRoot = root;
+                //2. Move the root reference to the left child
+                root = root.getLeft();
+                //3. Change the root.right refence to the tempRoot
+                root.setRight(tempRoot);
+                //4. Change the tempRoot.left reference to null
+                tempRoot.setLeft(null); 
+            }
+            if(node.getBalanceFactor() > 0){
+                Node<T> tempRoot = root;
+                root = root.getRight();
+                root.setLeft(tempRoot);
+                tempRoot.setRight(null);
+            }
+        }
     }
 
     

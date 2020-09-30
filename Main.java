@@ -39,19 +39,23 @@ public class Main{
 
     public Main(){
         MyCollection<String> myCollection = new BinaryTree();
-        System.out.println(myCollection.size());
+        // System.out.println(myCollection.size());
+        // myCollection.add("mike");
+        // System.out.println(myCollection.size());
+        // myCollection.add("golf");
+        // // System.out.println(myCollection.size());
+        // // myCollection.add("sierra");
+        // System.out.println(myCollection.size());
+        // myCollection.add("alpha");
+        // System.out.println(myCollection.size());
+
+
+        // System.out.println(myCollection.contains("mike"));
+        // System.out.println(myCollection.contains("Haul Truck"));
+
         myCollection.add("mike");
-        System.out.println(myCollection.size());
-        myCollection.add("golf");
-        //System.out.println(myCollection.size());
-        //myCollection.add("sierra");
-        System.out.println(myCollection.size());
-        myCollection.add("alpha");
-        System.out.println(myCollection.size());
-
-
-        System.out.println(myCollection.contains("mike"));
-        System.out.println(myCollection.contains("Haul Truck"));
+        myCollection.add("sierra");
+        myCollection.add("zulu");
 
         //Main.viewTree(myCollection);
 
